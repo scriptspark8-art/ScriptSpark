@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – ScriptSpark</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text-primary: #2C2C2B;
+      --text-secondary: #7D7A75;
+      --canvas: #FFFFFF;
+      --surface: #F9F8F7;
+      --surface-2: #F0EFED;
+      --border: #E6E5E3;
+      --accent: #2783DE;
+      --accent-soft: #E5F2FC;
+      --radius: 8px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-primary: #FFFFFF;
+        --text-secondary: rgba(255,255,255,0.65);
+        --canvas: #191919;
+        --surface: #202020;
+        --surface-2: #383836;
+        --border: rgba(255,255,255,0.20);
+        --accent: #5E9FE8;
+        --accent-soft: rgba(94,159,232,0.12);
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--canvas);
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--canvas);
+      border-bottom: 1px solid var(--border);
+      padding: 0 48px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 30px;
+      height: 30px;
+      background: var(--accent);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon svg { display: block; }
+
+    .logo-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 48px 56px;
+      text-align: center;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .hero-date {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* ── Layout ── */
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    .intro {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .section-icon {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: var(--radius);
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .section-icon svg {
+      display: block;
+      color: var(--accent);
+    }
+
+    .section h2 {
+      font-size: 19px;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      color: var(--text-primary);
+      padding-top: 6px;
+    }
+
+    .section p {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      padding-left: 50px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      header { padding: 0 20px; }
+      .hero { padding: 48px 20px 40px; }
+      .hero h1 { font-size: 28px; }
+      .page-wrap { padding: 40px 20px 64px; }
+      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="#">
+      <div class="logo-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 13L6.5 3L10 8.5L12 6L14 13" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="logo-name">ScriptSpark</span>
+    </a>
+  </header>
+
+  <div class="hero">
+    <div class="hero-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="hero-date">Last updated: September 26, 2026</p>
+  </div>
+
+  <div class="page-wrap">
+
+    <p class="intro">
+      ScriptSpark does not require an account and does not collect, store, or transmit
+      any personal data to us or any third party.
+    </p>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2>On-device AI</h2>
+      </div>
+      <p>Script generation uses Apple's on-device Foundation Models (Apple Intelligence). Your prompts and generated scripts are processed entirely on your device and never leave it.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 14V6a2 2 0 012-2h6a2 2 0 012 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M2 14h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M7 10h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h2>Your Library</h2>
+      </div>
+      <p>Scripts you save are stored locally on your device only. We have no access to this data, and it is never uploaded to our servers — we don't operate any servers that store user content.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M9 6v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2>Optional "Bring Your Own AI" <span style="font-size:13px;font-weight:500;color:var(--text-secondary);">(Pro feature)</span></h2>
+      </div>
+      <p>If you choose to connect your own OpenAI, Anthropic, or Google Gemini API key, that key is stored securely in your device's Keychain and is never sent to us. When you use this feature, your prompts are sent directly from your device to the AI provider you chose, governed by that provider's own privacy policy. We recommend reviewing their policies before use.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 6h12M3 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <rect x="2" y="3" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h2>Payments</h2>
+      </div>
+      <p>Subscriptions are handled entirely by Apple's App Store via StoreKit. We do not receive or store your payment information.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M9 5v4M9 13v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h2>Analytics &amp; Tracking</h2>
+      </div>
+      <p>ScriptSpark does not use third-party analytics, advertising, or tracking SDKs.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 3C6 3 3 5 3 8c0 2 1.5 3.5 3 4.5V15l3-1.5 3 1.5v-2.5C13.5 11.5 15 10 15 8c0-3-3-5-6-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>ScriptSpark does not knowingly collect data from anyone, including children, because it collects no data at all.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 3v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h2>Changes</h2>
+      </div>
+      <p>We may update this policy occasionally; changes will be reflected on this page.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 5h12a1 1 0 011 1v7a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M2 6l7 5 7-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h2>Contact</h2>
+      </div>
+      <p>Questions about this policy can be sent to <a href="mailto:scriptspark8@gmail.com" style="color:var(--accent);text-decoration:none;">scriptspark8@gmail.com</a>.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 ScriptSpark. All rights reserved.</p>
+    <p>Made with care for your privacy.</p>
+  </footer>
+
+</body>
+</html>
